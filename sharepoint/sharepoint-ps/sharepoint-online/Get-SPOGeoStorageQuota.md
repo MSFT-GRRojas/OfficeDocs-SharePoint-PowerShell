@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spogeostoragequota
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spogeostoragequota
 applicable: SharePoint Online
 title: Get-SPOGeoStorageQuota
 schema: 2.0.0
@@ -26,7 +26,7 @@ Get-SPOGeoStorageQuota [-AllLocations] [<CommonParameters>]
 
 This cmdlet shows the storage on the current location or all locations in a multi-geo tenant.
 
-This Cmdlet requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to get the storage on current location or all locations in a multi-geo SPO tenant.
+This cmdlet requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online Administrator or Global Administrator to get the storage on the current location or all locations in a multi-geo SPO tenant.
 
 ## EXAMPLES
 
@@ -71,7 +71,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/revoke-spousersession
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/revoke-spousersession
 applicable: SharePoint Online
 title: Revoke-SPOUserSession
 schema: 2.0.0
@@ -24,11 +24,11 @@ Revoke-SPOUserSession [-User] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 
 ## DESCRIPTION
 
-You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
+You must be a Global Administrator to run the cmdlet.
 
 Requires a valid `Connect-SPOService` context to identify the tenant. For information about how to connect to the tenant, see `Connect-SPOService`.
 
-When the cmdlet is ran the following will occur:
+When the cmdlet is run the following will occur:
 
 User will be signed out of browser, desktop and mobile applications accessing Office 365 resources across all devices.
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/upgrade-spsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/upgrade-spsite
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPSite
 schema: 2.0.0
@@ -34,7 +34,7 @@ This prevents unexpected version upgrades of site collections if you use this cm
 When in version-to-version upgrade mode, site collection health checks are run in repair mode to ensure that the site collection is healthy enough to upgrade successfully.
 If successful, the remainder of the upgrade occurs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -43,16 +43,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 Upgrade-SPSite https://<site name>/sites/testsite
 ```
 
-This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
-The SPSite.CompatibilityLevel will not be changed by this operation.
+This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only available build-to-build upgrade actions that are associated with the current site collection operating mode. The SPSite.CompatibilityLevel will not be changed by this operation.
 
 ### -------------EXAMPLE 2----------
 ```
 Upgrade-SPSite https://<site name>/sites/testsite -VersionUpgrade
 ```
 
-This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
-The SPSite.CompatibilityLevel will not be changed by this operation.
+This example upgrades the existing https://\<site name\>/sites/testsite site collection by using all available build-to-build upgrade actions that are associated with the current site collection operating mode and performs a version-to-version upgrade.
 
 ## PARAMETERS
 

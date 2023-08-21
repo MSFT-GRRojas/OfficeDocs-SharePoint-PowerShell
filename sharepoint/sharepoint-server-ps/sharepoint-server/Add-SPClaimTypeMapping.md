@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spclaimtypemapping
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spclaimtypemapping
 applicable: SharePoint Server Subscription Edition
 title: Add-SPClaimTypeMapping
 schema: 2.0.0
@@ -26,13 +26,21 @@ Add-SPClaimTypeMapping [-Identity] <SPClaimMappingPipeBind>
 ## DESCRIPTION
 The Add-SPClaimTypeMapping cmdlet adds a claim type mapping rule to a security token service (STS) identity provider from a farm trust STS authentication provider.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-Get-SPTrustedIdentityProvider -Name "LiveIDSTS" | Add-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
+$trustedIdentityTokenIssuer = Get-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS"
+
+$trustedIdentityTokenIssuer.ClaimTypes.Add("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")  
+
+$trustedIdentityTokenIssuer.Update()  
+
+$mapping = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
+
+$mapping | Add-SPClaimTypeMapping -TrustedIdentityTokenIssuer $trustedIdentityTokenIssuer
 ```
 
 This example adds a claim mapping to a trusted identity token issuer.
@@ -123,4 +131,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

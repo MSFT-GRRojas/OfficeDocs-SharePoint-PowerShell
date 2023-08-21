@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/stop-spotenantrename
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/stop-spotenantrename
 applicable: SharePoint Online
 title: Stop-SPOTenantRename
 schema: 2.0.0
@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 > [!IMPORTANT]
-> This feature is in preview and currently available to organizations that have no more than 1,000 total SharePoint sites and OneDrive accounts combined.
+> This feature is currently available to organizations that have no more than 10,000 total SharePoint sites and OneDrive accounts combined.
 
 Cancels the scheduled job to change the SharePoint domain name for your organization in Microsoft 365. 
 
@@ -83,7 +83,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Rename your SharePoint domain](https://aka.ms/SPOTenantRename)
 

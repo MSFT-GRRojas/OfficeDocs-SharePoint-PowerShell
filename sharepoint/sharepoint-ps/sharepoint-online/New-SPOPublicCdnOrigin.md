@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-spopubliccdnorigin
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spopubliccdnorigin
 applicable: SharePoint Online
 title: New-SPOPublicCdnOrigin
 schema: 2.0.0
@@ -24,7 +24,7 @@ New-SPOPublicCdnOrigin [-Url] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 
 ## DESCRIPTION
 
-This Cmdlet creates a new Public CDN Origin in your SPO Tenant
+This cmdlet creates a new Public CDN Origin in your SPO Tenant
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/start-spositerename
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spositerename
 applicable: SharePoint Online
 title: Start-SPOSiteRename
 schema: 2.0.0
@@ -23,7 +23,7 @@ Starts a job to rename a site. You can change the URL, and optionally the site t
 
 ```Powershell
 Start-SPOSiteRename [-Identity] <SpoSitePipeBind> [-NewSiteUrl] <string> [[-NewSiteTitle] <string>]
-    [[-SuppressMarketplaceAppCheck]] [[-SuppressWorkflow2013Check]] [[-Reserved] <string>] [-WhatIf] [-Confirm]
+    [[-SuppressMarketplaceAppCheck]] [[-SuppressWorkflow2013Check]] [-ValidationOnly] [[-Reserved] <string>] [-WhatIf] [-Confirm]
     [<CommonParameters>]
 ```
 
@@ -151,9 +151,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ValidationOnly
+
+Verifies that the site address can be changed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Reserved
 
-PARAMVALUE: String
+Reserved for Microsoft internal use.
 
 ```yaml
 Type: String
@@ -208,7 +225,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

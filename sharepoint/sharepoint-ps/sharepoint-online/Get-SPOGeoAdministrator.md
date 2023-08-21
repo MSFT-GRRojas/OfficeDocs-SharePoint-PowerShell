@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spogeoadministrator
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spogeoadministrator
 applicable: SharePoint Online
 title: Get-SPOGeoAdministrator
 schema: 2.0.0
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet returns the SharePoint Online user or security group accounts with global administrative privileges in the current Multi-Geographics tenant.
+This cmdlet returns the SharePoint Online user or security group accounts with Global Admin privileges in the current multi-geo tenant.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-SPOGeoAdministrator [<CommonParameters>]
 ## DESCRIPTION
 
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Get-SPOGeoAdministrator` cmdlet has a single parameter set and matches a user or a list of users which has the ability to do changes globally in the geo location that you are connected to.
 
@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Get-SPOGeoAdministrator
 ```
 
-This cmdlet will output a SharePoint Online user or security group that is Multi-Geographic administrators on the current multi-geo tenant.
+This cmdlet will output a SharePoint Online user or security group that is Multi-Geo administrators on the current multi-geo tenant.
 
 ## PARAMETERS
 
@@ -53,9 +53,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add or remove a geo administrator](https://docs.microsoft.com/Office365/Enterprise/add-a-sharepoint-geo-admin)
+[Add or remove a geo administrator](https://learn.microsoft.com/Office365/Enterprise/add-a-sharepoint-geo-admin)
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

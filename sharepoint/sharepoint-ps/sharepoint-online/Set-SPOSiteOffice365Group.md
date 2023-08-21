@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spositeoffice365group
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositeoffice365group
 applicable: SharePoint Online
 title: Set-SPOSiteOffice365Group
 schema: 2.0.0
@@ -32,10 +32,7 @@ Set-SPOSiteOffice365Group
 
 ## DESCRIPTION
 
-Connects a top-level SPO site collection to a new Microsoft 365 Group.  You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
-
-> [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
+Connects a top-level SPO site collection to a new Microsoft 365 Group. You must be a SharePoint Online administrator or Global administrator to run the cmdlet and be a site collection administrator of the site.
 
 If the site doesn't exist, this cmdlet returns a "File not found" error.
 

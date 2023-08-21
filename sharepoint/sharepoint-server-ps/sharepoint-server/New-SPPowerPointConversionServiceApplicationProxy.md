@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Powerpoint.dll-Help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplicationproxy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: New-SPPowerPointConversionServiceApplicationProxy
 schema: 2.0.0
@@ -28,12 +28,12 @@ The service application proxy is instantiated on the front-end web server and ac
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### Example
 ```powershell
-New-SPPowerPointConversionServiceApplicationProxy -Name "MyWorkgroupPPTAppProxy" -ServiceApplication "MyWorkgroupPPTApp" -AddtoDefaultGroup
+New-SPPowerPointConversionServiceApplicationProxy -Name "PowerPoint Conversion Service application proxy" -ServiceApplication "PowerPoint Conversion Service Application" -AddtoDefaultGroup
 ```
 
-This example creates a new instance of the PowerPoint Conversion Service application proxy named MyWorkgroupPPTAppProxy, binds it to the MyWorkgroupPPTApp service application and then adds it to the default service application proxy group
+This example creates a new instance of the PowerPoint Conversion Service application proxy named _PowerPoint Conversion Service application proxy_, binds it to the _PowerPoint Conversion Service Application_ service application, and then adds it to the default service application proxy group
 
 
 ## PARAMETERS

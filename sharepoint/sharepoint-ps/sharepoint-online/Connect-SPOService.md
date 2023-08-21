@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/connect-sposervice
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/connect-sposervice
 applicable: SharePoint Online
 title: Connect-SPOService
 schema: 2.0.0
@@ -23,7 +23,7 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 
 ```powershell
 Connect-SPOService -AuthenticationUrl <String> [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
- -Url <UrlCmdletPipeBind> [<CommonParameters>]
+ -Url <UrlCmdletPipeBind> -ModernAuth <Boolean> [<CommonParameters>] 
 ```
 
 ### AuthenticationLocation
@@ -38,7 +38,7 @@ Connect-SPOService [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>
 The `Connect-SPOService` cmdlet connects a SharePoint Online administrator or Global Administrator to the SharePoint Online Administration Center.
 
 Only a single SharePoint Online service connection is maintained from any single Windows PowerShell session.
-In other words, this is a per-organization administrator connection.
+In other words, this is a per-geo within an organization administrator connection.
 Running the `Connect-SPOService` cmdlet twice implicitly disconnects the previous connection.
 The Windows PowerShell session will be set to serve the new SharePoint Online administrator specified.
 
@@ -46,7 +46,7 @@ A delegated partner administrator has to swap connections for different organiza
 
 You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -85,11 +85,19 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com -Region ITAR
 
 Connects to a SharePoint Online Administration Center specifying the region.
 
+### -----------------------EXAMPLE 5-----------------------------
+
+ ```powershell
+Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
+```
+Connecting to SPO Service with ModernAuth Flag.
+
 ## PARAMETERS
 
 ### -AuthenticationUrl
 
 Location for AAD Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
+
 
 ```yaml
 Type: String
@@ -176,6 +184,24 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -ModernAuth
+
+ Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
+
+To use it you also need to provide the **AuthenticationUrl** parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -190,6 +216,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Disconnect-SPOService](Disconnect-SPOService.md)

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/start-spositecontentmove
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spositecontentmove
 applicable: SharePoint Online
 title: Start-SPOSiteContentMove
 schema: 2.0.0
@@ -39,7 +39,7 @@ Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationUrl] <String> [[
 
 UrlAndDestinationDataLocation: These parameters allow a SharePoint administrator to validate a geo move before scheduling it.
 
-UrlAndDestinationUrl: These parameters allow a SharePoint administrator to move and (optionally) rename a site as part of the geo move operation by specifying a new site name in the destrination URL.
+UrlAndDestinationUrl: These parameters allow a SharePoint administrator to move and (optionally) rename a site as part of the geo move operation by specifying a new site name in the destination URL.
 
 ## EXAMPLES
 
@@ -248,7 +248,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeomovedusers
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeomovedusers
 applicable: SharePoint Online
 title: Get-SPOCrossGeoMovedUsers
 schema: 2.0.0
@@ -24,7 +24,7 @@ Get-SPOCrossGeoMovedUsers -Direction <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet allows you to get the moved users out and in the current SPO Site. It requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to get the moved users out and in the current SPO site.
+This cmdlet allows you to get the moved users out and in the current SPO Site. It requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online Administrator or Global Administrator to get the moved users out and in the current SPO site.
 
 ## EXAMPLES
 
@@ -74,6 +74,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)

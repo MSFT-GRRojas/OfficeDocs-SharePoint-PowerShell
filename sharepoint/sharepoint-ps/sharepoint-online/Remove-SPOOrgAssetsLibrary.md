@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spoorgassetslibrary
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spoorgassetslibrary
 applicable: SharePoint Online
 title: Remove-SPOOrgAssetsLibrary
 author: Maralesfahanpoor
@@ -25,7 +25,7 @@ Remove-SPOOrgAssetsLibrary [-LibraryUrl <String>] [-ListId <Guid>] [<CommonParam
 
 ## DESCRIPTION
 
-The Remove-SPOOrgAssetsLibrary cmdlet removes a library that was designated as a central location for organization assets across the tenant. Once this cmdlet is run, this library will no longer be accessible from the "Your organization" tab in the file picker. When running the cmdlet, either the library URL or library ID (not both) needs to be indicated.
+The Remove-SPOOrgAssetsLibrary cmdlet removes a library that was designated as a central location for organization assets across the tenant. Once this cmdlet is run, this library will no longer be accessible from the "Your organization" tab in the file picker (it might take up to 24 hours before the change applies). When running the cmdlet, either the library URL or library ID (not both) needs to be indicated.
 
 Once the library is removed, CDN will still be enabled for this library. To disable CDN for this library, use Remove-SPOTenantCdnOrigin with the server relative URL (example: /sites/branding/assets).
 
@@ -81,8 +81,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Add-SPOOrgAssetsLibrary](https://docs.microsoft.com/powershell/module/sharepoint-online/add-spoorgassetslibrary?view=sharepoint-ps)
+[Add-SPOOrgAssetsLibrary](https://learn.microsoft.com/powershell/module/sharepoint-online/add-spoorgassetslibrary?view=sharepoint-ps)
 
-[Set-SPOOrgAssetsLibrary](https://docs.microsoft.com/powershell/module/sharepoint-online/set-spoorgassetslibrary?view=sharepoint-ps)
+[Set-SPOOrgAssetsLibrary](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spoorgassetslibrary?view=sharepoint-ps)
 
-[Get-SPOOrgAssetsLibrary](https://docs.microsoft.com/powershell/module/sharepoint-online/get-spoorgassetslibrary?view=sharepoint-ps)
+[Get-SPOOrgAssetsLibrary](https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoorgassetslibrary?view=sharepoint-ps)

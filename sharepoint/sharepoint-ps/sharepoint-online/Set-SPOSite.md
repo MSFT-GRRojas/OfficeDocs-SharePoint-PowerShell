@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-sposite
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
@@ -30,13 +30,32 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
- [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
- [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
- [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AuthenticationContextName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]  [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>] [-SensitivityLabel <String>] 
- [-RemoveLabel] [<CommonParameters>]
+ [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] 
+ [-DisableFlows <FlowsPolicy>]
+ [-LoopDefaultSharingLinkScope <String>]
+ [-LoopDefaultSharingLinkRole <String>]
+ [-RestrictedToGeo <RestrictedToRegion>] 
+ [-SharingAllowedDomainList <String>]
+ [-SharingBlockedDomainList <String>] 
+ [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] 
+ [-StorageQuotaReset]
+ [-DefaultSharingLinkType]
+ [-DefaultLinkPermission] 
+ [-DefaultLinkToExistingAccess]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-AuthenticationContextName <String>]
+ [-LimitedAccessFileType <SPOLimitedAccessFileType>] 
+ [-AllowEditing <Boolean>]  
+ [-AnonymousLinkExpirationInDays <Int32>] 
+ [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
+ [-OverrideTenantExternalUserExpirationPolicy <Boolean>] 
+ [-ExternalUserExpirationInDays <Int32>]
+ [-SensitivityLabel <String>] 
+ [-RequestFilesLinkExpirationInDays <Int32>] 
+ [-RequestFilesLinkEnabled <Boolean>]
+ [-RemoveLabel] 
+ [<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -69,7 +88,7 @@ For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates 
 
 You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 For OneDrive for Business site collection, the only valid parameters are Identity, AllowDownloadingNonWebViewableFiles, AllowEditing, ConditionalAccessPolicy, DefaultLinkPermission, DefaultSharingLinkType, DisableCompanyWideSharingLinks, LimitedAccessFileType, LockState, Owner, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode, ShowPeoplePickerSuggestionsForGuestUsers, StorageQuota, and StorageWarningLevel.
 
@@ -77,7 +96,7 @@ For Groups site collection, the only valid parameters  are Identity, AllowSelfSe
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### Example 1
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.healy@contoso.com -NoWait
@@ -85,7 +104,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.heal
 
 Example 1 updates the owner of site collection <https://contoso.sharepoint.com/sites/site1> to the person whose email address is joe.healy@contoso.com. This cmdlet is executed immediately without delay.
 
-### -----------------------EXAMPLE 2-----------------------------
+### Example 2
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -StorageQuota 1024
@@ -93,7 +112,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -StorageQuota 1
 
 Example 2 updates the settings of site collection <https://contoso.sharepoint.com/sites/site1.> The storage quota is updated to 1024 megabytes (1 GB).
 
-### -----------------------EXAMPLE 3-----------------------------
+### Example 3
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400
@@ -101,7 +120,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -Storage
 
 This example updates the settings of site collection <https://contoso.sharepoint.com.> The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400 megabytes.
 
-### -----------------------EXAMPLE 4-----------------------------
+### Example 4
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
@@ -109,7 +128,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
 
 Example 4 prevents non-owners of a site from inviting new users to the site.
 
-### -----------------------EXAMPLE 5-----------------------------
+### Example 5
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuota 3000 -StorageQuotaWarningLevel 2000
@@ -120,7 +139,7 @@ This example sets the quota for the site.
 > [!NOTE]
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
-### -----------------------EXAMPLE 6-----------------------------
+### Example 6
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $true
@@ -128,7 +147,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $tru
 
 Example 6 enables the site "site1" to create  Project Web Applications (PWA).
 
-### -----------------------EXAMPLE 7-----------------------------
+### Example 7
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingCapability ExternalUserSharingOnly
@@ -137,7 +156,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingDomainR
 
 Example 7 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users, and then specifies an email domain that is allowed for sharing with the external collaborators.
 
-### -----------------------EXAMPLE 8-----------------------------
+### Example 8
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -AddInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
@@ -145,7 +164,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -AddInformat
 
 This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the site. 
 
-### -----------------------EXAMPLE 9-----------------------------
+### Example 9
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
@@ -153,7 +172,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInfor
 
 In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
 
-### -----------------------EXAMPLE 10-----------------------------
+### Example 10
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -ConditionalAccessPolicy AuthenticationContext -AuthenticationContextName "MFA"
@@ -214,7 +233,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-PARAMVALUE: SwitchParameter
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -247,7 +266,7 @@ Accept wildcard characters: False
 
 ### -DisableSharingForNonOwners
 
-This parameter prevents non-owners from invited new users to the site.
+This parameter prevents non-owners from inviting new users to the site.
 
 This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.
 
@@ -266,7 +285,7 @@ Accept wildcard characters: False
 ### -LocaleId
 
 Specifies the language of this site collection.
-For more information, see [MS-OE376, LCID](https://docs.microsoft.com/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a).
+For more information, see [MS-OE376, LCID](https://learn.microsoft.com/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a).
 
 ```yaml
 Type: UInt32
@@ -430,7 +449,7 @@ Accept wildcard characters: False
 Determines what level of sharing is available for the site.
 The possible values are: Disabled - don't allow sharing outside your organization, ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory, ExternalUserSharingOnly - allow external users who accept sharing invitations and sign in as authenticated users, or ExternalUserAndGuestSharing - allow sharing with all external users, and by using anonymous access links.
 
-For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off>).
+For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://learn.microsoft.com/sharepoint/turn-external-sharing-on-or-off>).
 
 ```yaml
 Type: SharingCapabilities
@@ -587,7 +606,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
-Disables People in your organization links. For more information, see [People in your organization sharing links](https://docs.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
+Disables People in your organization links. For more information, see [People in your organization sharing links](https://learn.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
 Possible values
 
 - Disabled
@@ -648,7 +667,7 @@ Accept wildcard characters: False
 
 Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
-For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: String
@@ -666,7 +685,7 @@ Accept wildcard characters: False
 
 Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
-For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: String
@@ -689,7 +708,7 @@ Possible values are:
 - AllowList - Sharing is allowed only with external users that have account on domains specified within -SharingAllowedDomainList
 - BlockList - Sharing is allowed with external users in all domains except in domains specified within -SharingBlockedDomainList
 
-For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://docs.microsoft.com/sharepoint/restricted-domains-sharing).
+For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
 ```yaml
 Type: SharingDomainRestrictionModes
@@ -714,7 +733,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -791,6 +810,57 @@ PARAMVALUE: None | View | Edit
 ```yaml
 Type: SharingPermissionType
 Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoopDefaultSharingLinkScope
+
+Gets or sets default share link scope for fluid on the site.
+
+The valid values are:  
+
+- Anyone
+- Organization
+- SpecificPeople
+- Uninitialized
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoopDefaultSharingLinkRole
+
+Gets or sets default share link role for fluid on the site
+
+The valid values are:  
+
+- Edit
+- LimitedEdit
+- LimitedView
+- ManageList
+- None
+- Owner
+- RestrictedView
+- Review
+- Submit
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: False
@@ -880,6 +950,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RequestFilesLinkEnabled
+
+Enables or disables the Request Files link on the site.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestFilesLinkExpirationInDays
+
+Specifies the number of days before a Request Files link expires for the site.
+
+The value can be from 0 to 730 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: -1
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConditionalAccessPolicy
 
 Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation here to understand Conditional Access Policy usage in SharePoint Online.
@@ -961,7 +1066,7 @@ Accept wildcard characters: False
 ```
 ### -AddInformationSegment
 
-This parameter allows you to add a segment to a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers in SharePoint Online.
+This parameter allows you to add a segment to a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://learn.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers in SharePoint Online.
 
 **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
@@ -973,7 +1078,7 @@ Default value: None
 ```
 
 ### -RemoveInformationSegment
-This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers with SharePoint Online.
+This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://learn.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers with SharePoint Online.
 
 **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
@@ -1010,6 +1115,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Set-SPOTenant](Set-SPOTenant.md)

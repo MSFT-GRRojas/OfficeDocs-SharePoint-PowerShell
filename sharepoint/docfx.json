@@ -33,7 +33,9 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/powershell/breadcrumb/toc.json",
+      "ms.service": "sharepoint-server-itpro",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "breadcrumb_path": "/sharepoint/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-SharePoint-powershell",
@@ -41,9 +43,22 @@
       "author": "techwriter40",
       "ms.author": "pamgreen",
       "ms.devlang": "powershell",
-      "ms.prod": "sharepoint-server-itpro"
+      "ms.date": "09/08/2021",
+      "contributors_to_exclude": [ 
+        "rjagiewich", 
+        "traya1", 
+        "rmca14", 
+        "claydetels19", 
+        "jborsecnik",
+        "tiburd",
+        "garycentric"
+      ]
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.collection": {
+        "sharepoint-server-ps/sharepoint-server/**/*.md": "must-keep"
+      }
+    },
     "template": [],
     "dest": "sharepointps"
   }

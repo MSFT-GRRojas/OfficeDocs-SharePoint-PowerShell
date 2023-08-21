@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositescriptfromweb
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositescriptfromweb
 applicable: SharePoint Online
 title: Get-SPOSiteScriptFromWeb
 schema: 2.0.0
@@ -40,7 +40,7 @@ C:\> $extracted = Get-SPOSiteScriptFromWeb `
     -IncludeRegionalSettings `
     -IncludeSiteExternalSharingCapability `
     -IncludeLinksToExportedItems `
-    -IncludedLists ("Shared Documents", "Lists/Project Activities")
+    -IncludedLists ("Shared%20Documents", "Lists/Project%20Activities")
 C:\> Add-SPOSiteScript `
     -Title "Contoso template site" `
     -Description "This is a copy of a site collection." `
@@ -68,6 +68,8 @@ Accept wildcard characters: False
 ### -IncludedLists
 
 An array of one or more lists. Each is identified by the list url.
+
+Note: Currently, navigation nodes are not exported.
 
 ```yaml
 Type: string[]

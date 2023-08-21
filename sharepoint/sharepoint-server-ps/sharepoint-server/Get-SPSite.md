@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsite
 applicable: SharePoint Server Subscription Edition
 title: Get-SPSite
 schema: 2.0.0
@@ -48,7 +48,7 @@ Get-SPSite [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The Get-SPSite cmdlet returns either a single site that matches the Identity parameter, or all the sites that match the Filter parameter for the specified scope.
 The scopes are the WebApplication, ContentDatabase , and SiteSubscription parameters.
@@ -60,7 +60,7 @@ All site collections that match this partial URL for the specified scope are ret
 Additionally, if the Regex parameter is provided, the Identity parameter is treated as a regular expression and any site collection with a URL provided in the given scope that matches the expression is returned.
 
 The Filter parameter is a server-side filter for certain site collection properties that are stored in the content database; without the Filter parameter, filtering on these properties is a slow process.
-These site collection properties are Owner, SecondaryOwner, and LockState.
+These site collection properties are Owner, SecondaryContact, and LockState.
 The Filter parameter is a script block that uses the same syntax as a Where-Object statement, but is run on the server for faster results.
 
 Valid values for LockState are: Unlock, NoAdditions, ReadOnly, NoAccess.
@@ -68,7 +68,7 @@ Valid values for LockState are: Unlock, NoAdditions, ReadOnly, NoAccess.
 It is important to note that every site collection that the Get-SPSite cmdlet returns is automatically destroyed at the end of the pipeline.
 To store the results of Get-SPSite in a local variable, use the Start-SPAssignment and Stop-SPAssignment cmdlets to avoid memory leaks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -81,7 +81,7 @@ This example gets the collection of subweb titles in site collection at https://
 
 ### ------------------EXAMPLE 2--------------------- 
 ```powershell
-Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
+Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryContact
 ```
 
 This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
@@ -377,4 +377,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

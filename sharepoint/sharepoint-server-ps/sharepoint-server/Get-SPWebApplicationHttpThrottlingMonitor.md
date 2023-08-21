@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spwebapplicationhttpthrottlingmonitor
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwebapplicationhttpthrottlingmonitor
 applicable: SharePoint Server Subscription Edition
 title: Get-SPWebApplicationHttpThrottlingMonitor
 schema: 2.0.0
@@ -26,13 +26,13 @@ Get-SPWebApplicationHttpThrottlingMonitor [-Identity] <SPWebApplicationPipeBind>
 The Get-SPWebApplicationHttpThrottlingMonitor cmdlet reads all counters for network throttling on a Web application.
 This cmdlet returns a list that contains all of the performance counters and their associated Health Score bucket values.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-$s = get-SPWebApplicationHTTPThrottlingMonitors https://sharepoint
+$s = get-SPWebApplicationHTTPThrottlingMonitor https://sharepoint
 ```
 
 This example gets all performance counters that are being read in the network throttling monitor for the https://sharepoint Web application.
@@ -89,4 +89,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
