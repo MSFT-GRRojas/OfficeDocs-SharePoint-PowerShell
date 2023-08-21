@@ -137,6 +137,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>]
  [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
+ [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2668,6 +2669,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteOwnerManageLegacyServicePrincipalEnabled
+Enables SharePoint Online Administrators to modify the default procedures for SharePoint app registration via AppRegNew.aspx page and permission updates via AppInv.aspx page..
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
